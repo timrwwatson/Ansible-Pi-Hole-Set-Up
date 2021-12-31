@@ -74,11 +74,12 @@
           regexp: "^ChallengeResponseAuthentication"
           line: "ChallengeResponseAuthentication no"
 
-      - name: Disable PasswordAuthentication
-        lineinfile:
-          path: "{{ sshd_config_path }}"
-          regexp: "^PasswordAuthentication"
-          line: "PasswordAuthentication no"
+ #    For now lets leave password authentication in :)
+ #     - name: Disable PasswordAuthentication
+ #       lineinfile:
+ #         path: "{{ sshd_config_path }}"
+ #         regexp: "^PasswordAuthentication"
+ #         line: "PasswordAuthentication no"
 
       - name: Disable UsePAM
         lineinfile:
