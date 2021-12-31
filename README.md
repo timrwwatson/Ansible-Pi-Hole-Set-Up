@@ -67,8 +67,8 @@ This chapter describes how to
 ### How to get a copy of the project
 
 ```
-git clone https://github.com/tomgelbling/Securing-your-Raspberry-Pi-with-Ansible.git
-cd Securing-your-Raspberry-Pi-with-Ansible/
+git clone https://github.com/timrwwatson/Ansible-Pi-Hole-Set-Up.git
+cd Ansible-Pi-Hole-Set-Up/
 ```
 
 ### How to edit the config files
