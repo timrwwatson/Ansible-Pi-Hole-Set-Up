@@ -73,7 +73,7 @@ cd Ansible-Pi-Hole-Set-Up/
 
 ### How to edit the config files
 
-On your Ansible Host machine you may need to add/edit the ansible.cfg file
+On your Ansible Host machine you may need to add/edit the `ansible.cfg` file
 
 For me this was located in the `/etc/ansible/` folder and I added/changed:
 ```
