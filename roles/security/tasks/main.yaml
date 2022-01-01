@@ -12,8 +12,7 @@
 
       - name: Install required packages
         apt:
-          name: "{{ item }}"
-        with_items:
+          pkg:
           - ufw
           - fail2ban
 
