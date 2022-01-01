@@ -73,6 +73,14 @@ cd Ansible-Pi-Hole-Set-Up/
 
 ### How to edit the config files
 
+On your Ansible Host machine you may need to add/edit the ansible.cfg file
+For me I added/changed:
+```
+host_key_checking = False
+interpreter_python=auto_silent
+```
+The first allows ssh connections without the host being in the known host file and the latter silences warnings about the location of the python dir.
+
 Add your Raspberry Pi IP address to the pi host group
 ```
 echo "192.168.2.110" >> hosts
