@@ -108,6 +108,42 @@
           port: ssh
           proto: tcp
 
+      - name: Pi hole open port 80 tcp
+        ufw:
+          rule: allow
+          port: '80'
+          proto: tcp
+
+      - name: Pi hole open port 53 tcp
+        ufw:
+          rule: allow
+          port: '53'
+          proto: tcp
+
+      - name: Pi hole open port 53 udp
+        ufw:
+          rule: allow
+          port: '53'
+          proto: udp
+
+      - name: Pi hole open port 67 tcp
+        ufw:
+          rule: allow
+          port: '67'
+          proto: tcp
+
+      - name: Pi hole open port 67 udp
+        ufw:
+          rule: allow
+          port: '67'
+          proto: udp
+
+      - name: Pi hole open port 546:547 udp ipv6
+        ufw:
+          rule: allow
+          port: 546:547
+          proto: udp
+
 #Fail2ban internals and examples: https://www.digitalocean.com/community/tutorials/how-fail2ban-works-to-protect-services-on-a-linux-server
 
       - name: Copy jail.local file to Raspberry Pi
