@@ -1,6 +1,5 @@
 ---
 
-
 #How to create encrypted passwords for the user module http://docs.ansible.com/ansible/latest/faq.html#how-do-i-generate-crypted-passwords-for-the-user-module
 #https://ansible-docs.readthedocs.io/zh/stable-2.0/rst/playbooks_filters.html
 #The custom password for the pi user is in this example raspbian
