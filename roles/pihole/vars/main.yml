@@ -1,0 +1,14 @@
+timezone: "Europe/London"
+static_dns: "1.1.1.1"
+pihole_image: "pihole/pihole:2021.12.1"
+pihole_ftl_max_db_days: "180"
+pihole_webpassword: Intranet # example value, change it and better use ansible-vault
+pihole_dns: "1.1.1.1;2606:4700:4700::1111"
+pihole_rev_server: "true"
+pihole_rev_server_domain: "Homehub3"
+pihole_rev_server_target: "192.168.0.5"
+pihole_rev_server_cidr: "192.168.0.1/24"
+pihole_ha_mode: yes
+pihole_vip_ipv4: "192.168.0.1/24"
+pihole_vip_ipv6: "fd00::1/64"
+sync_target: "{{ pihole_vip_ipv4.split('/')[0] }}"
