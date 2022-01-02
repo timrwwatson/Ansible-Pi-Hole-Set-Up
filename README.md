@@ -110,8 +110,10 @@ ansible-playbook -i hosts playbook.yaml
 
 * [Ansible 2.9.6](https://releases.ansible.com/ansible/)
 * [Ubuntu 20.04 Ansible VM](https://ubuntu.com/download/desktop)
-* [Desktop Raspian OS VM 2021-01-11](https://www.raspberrypi.org/downloads/raspbian/)
 * [Raspberry Pi 3 Model B+](https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/)
+
+* [Desktop Raspian OS VM 2021-01-11](https://www.raspberrypi.org/downloads/raspbian/)
+`Note however that using the desktop/windows vm images I found that they weren't able to install Docker correctly`
 
 ---
 

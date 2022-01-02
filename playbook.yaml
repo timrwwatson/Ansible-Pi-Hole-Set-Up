@@ -6,6 +6,11 @@
     become_user: root
 
     roles:
+      - updates
+      - docker
       - security
+      
+      
+      
 
 ...
