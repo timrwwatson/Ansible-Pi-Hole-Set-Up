@@ -1,4 +1,5 @@
 Project to create a Ansible playbook based of the one at: https://github.com/tomgelbling/Securing-your-Raspberry-Pi-with-Ansible
+
 The aim is to create a Pi Hole Raspberry Pi install with the relevant ufw rules via a playbook
 
 
@@ -107,13 +108,15 @@ ansible-playbook -i hosts playbook.yaml
 
 ### Built With
 
-* [Ansible 2.3.1](https://github.com/ansible/ansible/releases/tag/v2.3.1.0-1)
-* [Raspberry Pi 2 Model B](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/)
-* [Raspbian 2017-11-29-raspbian-stretch](https://www.raspberrypi.org/downloads/raspbian/)
+* [Ansible 2.9.6](https://releases.ansible.com/ansible/)
+* [Ubuntu 20.04 Ansible VM](https://ubuntu.com/download/desktop)
+* [Desktop Raspian OS VM 2021-01-11](https://www.raspberrypi.org/downloads/raspbian/)
+* [Raspberry Pi 3 Model B+](https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/)
 
 ---
 
 ## Authors
+The base of this project comes from the work done below:
 
 [Tom Gelbling](https://www.linkedin.com/in/tomgelbling/) - *Project initiator*
 
