@@ -1,10 +1,13 @@
 ---
 
-#For now lets just use plain text while we debug getting it working :)
 
 #How to create encrypted passwords for the user module http://docs.ansible.com/ansible/latest/faq.html#how-do-i-generate-crypted-passwords-for-the-user-module
+#https://ansible-docs.readthedocs.io/zh/stable-2.0/rst/playbooks_filters.html
 #The custom password for the pi user is in this example raspbian
 pi_custom_password: "{{'proof_it_changed' | password_hash('sha512')}}"
+
+#I've gone for random salts above but you can specify it like so:
+#pi_custom_password: "{{'proof_it_changed' | password_hash('sha512', 'asaltkey')}}"
 
 #How to create encrypted passwords for the user module http://docs.ansible.com/ansible/latest/faq.html#how-do-i-generate-crypted-passwords-for-the-user-module
 #The custom password for the notpi user is in this example notraspbian
