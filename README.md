@@ -130,6 +130,16 @@ ansible-playbook -i hosts playbook.yaml
 
 ---
 
+## Authors
+The base of this project comes from the work done below:
+
+[Tom Gelbling](https://www.linkedin.com/in/tomgelbling/) - *Project initiator/Securing a Pi using Ansible*
+
+[shaderecker](https://github.com/shaderecker/ansible-pihole/) - *I took elements from this project too/ ansible-pihole*
+[relaxdiego](https://github.com/shaderecker/ansible-pihole/) 
+
+There is also a list of [contributors](https://github.com/tomgelbling/Securing-your-Raspberry-Pi-with-Ansible/graphs/contributors) who participated in the original security project.
+
 ## License
 
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE.md](LICENSE.md) file for details
