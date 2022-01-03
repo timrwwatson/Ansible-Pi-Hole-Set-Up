@@ -1,6 +1,6 @@
-Project to create a Ansible playbook based of the one at: https://github.com/tomgelbling/Securing-your-Raspberry-Pi-with-Ansible
+Project to create a Ansible playbook based of the one at: https://github.com/tomgelbling/Securing-your-Raspberry-Pi-with-Ansible and creating a Pi Hole docker installation from here: https://github.com/shaderecker/ansible-pihole
 
-The aim is to create a Pi Hole Raspberry Pi install with the relevant ufw rules via a playbook
+The aim is to create a Pi Hole Raspberry Pi install with the relevant ufw rules via an Ansible playbook
 
 
 
@@ -98,6 +98,11 @@ Edit the variables file to set e.g. the custom password for the pi user, the nam
 vim roles/security/vars/main.yaml
 ```
 
+Edit the variables file to set the relevant IP addresses for Pi Hole etc
+```
+vim roles/pihole/vars/main.yaml
+```
+
 ### How to run the Ansible playbook to secure your Raspberry Pi
 
 ```
@@ -117,18 +122,7 @@ ansible-playbook -i hosts playbook.yaml
 
 ---
 
-## Authors
-The base of this project comes from the work done below:
-
-[Tom Gelbling](https://www.linkedin.com/in/tomgelbling/) - *Project initiator*
-
-See also the list of [contributors](https://github.com/tomgelbling/Securing-your-Raspberry-Pi-with-Ansible/graphs/contributors) who participated in this project.
-
 ## License
 
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
-
-* **Raspberry Pi Foundation** - *Initial work* - [Securing your Raspberry Pi](https://www.raspberrypi.org/documentation/configuration/security.md)
-* **PurpleBooth** - *A template to make good README.md* -  [README.md Template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)

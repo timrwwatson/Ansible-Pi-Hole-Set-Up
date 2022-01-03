@@ -46,6 +46,10 @@
       REV_SERVER_TARGET: "{{ pihole_rev_server_target }}"
       REV_SERVER_CIDR: "{{ pihole_rev_server_cidr }}"
       FTLCONF_MAXDBDAYS: "{{ pihole_ftl_max_db_days }}"
+      #DHCP_ACTIVE: "{{ pihole_dhcp_active }}"
+      #DHCP_START: "{{ pihole_dhcp_start }}"
+      #DHCP_END: "{{ pihole_dhcp_end }}"
+      #DHCP_ROUTER: "{{ pihole_dhcp_router }}"
     dns_servers:
       - 127.0.0.1
       - "{{ static_dns }}"
