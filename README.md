@@ -30,6 +30,14 @@ The playbook will perform configuration modifications in the following areas.
 * Install & enable ufw and fail2ban
 * Set default and ssh firewall rules
 
+### Docker
+* Install Docker
+* Add the alternate superuser to the docker group
+
+### Pi Hole
+* Create a Pi Hole Docker container
+* Test the container is running
+
 
 ## Prerequisites
 
