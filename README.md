@@ -1,10 +1,10 @@
+# Project Aims
+
 Project to create a Ansible playbook based of the one at: https://github.com/tomgelbling/Securing-your-Raspberry-Pi-with-Ansible and creating a Pi Hole docker installation from here: https://github.com/shaderecker/ansible-pihole
 
 The aim is to create a Pi Hole Raspberry Pi install with the relevant ufw rules via an Ansible playbook
 
-
-
-# Securing your Raspberry Pi with Ansible
+## Securing your Raspberry Pi with Ansible
 
 Ansible playbook to secure your Raspberry Pi.
 Based on [Securing your Raspberry Pi](https://www.raspberrypi.org/documentation/configuration/security.md)  by the Raspberry Pi Foundation.
