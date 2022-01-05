@@ -38,6 +38,10 @@ The playbook will perform configuration modifications in the following areas.
 * Create a Pi Hole Docker container
 * Test the container is running
 
+### TODO
+* Add unbound DNS server/service docker container to complete the Pi Hole Build: https://www.youtube.com/watch?v=FnFtWsZ8IP0
+
+
 
 ## Prerequisites
 
