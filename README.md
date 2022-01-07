@@ -33,6 +33,7 @@ The playbook will perform configuration modifications in the following areas.
 ### Docker
 * Install Docker
 * Add the alternate superuser to the docker group
+* Add an instance of [WatchTower](https://containrrr.dev/watchtower/) that will update containers with a CRON job
 
 ### Pi Hole
 * Create a Pi Hole Docker container

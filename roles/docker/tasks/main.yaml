@@ -45,6 +45,18 @@
         "fixed-cidr-v6": "2001:db8:1::/64"
       }
   notify: Restart Docker
+  
+- name: Install Watchtower
+  docker_container:
+    name: watchtower
+    image: "containrrr/watchtower"
+    pull: yes
+    restart_policy: unless-stopped
+    env:
+      TZ: "{{ timezone }}"
+      WATCHTOWER_SCHEDULE: "{{WATCHTOWER_CRON}}"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
 
 - name: Flush handlers
   meta: flush_handlers

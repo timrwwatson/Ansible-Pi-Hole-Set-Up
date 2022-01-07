@@ -1,0 +1,3 @@
+# CRON job to run every saturday morning at 2am, note the seconds coloumn at the beginning (left most column).
+# Sites like: https://crontab.guru/ don't include it !
+WATCHTOWER_CRON: "0 0 2 * * SAT"

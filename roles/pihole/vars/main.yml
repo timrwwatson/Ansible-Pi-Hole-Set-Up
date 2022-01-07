@@ -1,4 +1,3 @@
-timezone: "Europe/London"
 static_dns: "1.1.1.1"
 pihole_image: "pihole/pihole:2021.12.1"
 pihole_ftl_max_db_days: "180"
