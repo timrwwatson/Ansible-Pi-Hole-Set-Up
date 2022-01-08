@@ -37,5 +37,29 @@
     network_mode: host
     volumes:
       - "/home/{{ ansible_user }}/unbound/:/opt/unbound/etc/unbound/"
+      
+- name: Install dnsutils
+  apt:
+    force_apt_get: yes
+    name:
+      - dnsutils
+    install_recommends: no
+      
+- name: Check unbound container
+  command:
+    cmd: nslookup -port=5335 www.google.com 127.0.0.1
+  register: result
+  until: result.failed == false
+  retries: 5
+  delay: 10
+  
+- name: Print return information from the previous task
+  debug:
+    var: result
+  
+- name: Remove dnsutils package
+  apt:
+    name: dnsutils
+    state: absent
    
 

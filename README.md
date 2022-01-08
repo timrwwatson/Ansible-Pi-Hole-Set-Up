@@ -38,6 +38,7 @@ The playbook will perform configuration modifications in the following areas.
 ### Unbound
 * Create a [Unbound Docker container](https://hub.docker.com/r/mvance/unbound-rpi) see also [the none pi docker image](https://hub.docker.com/r/mvance/unbound) 
 * Configured to use host network slight modifications from the guide found [here](https://www.xfelix.com/2020/09/pihole-unbound-docker-setup-on-raspberry-pi/)
+* Test the container is running, inspiration taken from [here](https://github.com/robertdebock/ansible-role-dns/blob/master/molecule/default/verify.yml)
 
 ### Pi Hole
 * Create a Pi Hole Docker container

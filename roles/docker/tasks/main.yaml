@@ -5,11 +5,9 @@
       - gnupg2
       - software-properties-common
     
-
 - name: Add Docker apt key
   apt_key:
     url: https://download.docker.com/linux/raspbian/gpg
-    #id: 9DC858229FC7DD38854AE2D88D81803C0EBFCD88
 
 - name: Add Docker apt repository
   apt_repository:

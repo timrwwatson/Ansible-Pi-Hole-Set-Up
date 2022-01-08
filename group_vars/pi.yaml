@@ -3,5 +3,6 @@
   ansible_user: "pi"
   ansible_ssh_pass: "raspberry"
   docker_release: "buster"
+  alternative_user: "notpi"
 
 ...
