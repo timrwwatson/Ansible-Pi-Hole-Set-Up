@@ -2,16 +2,11 @@
 
 Project to create a Ansible playbook based of the one at: https://github.com/tomgelbling/Securing-your-Raspberry-Pi-with-Ansible and creating a Pi Hole docker installation from here: https://github.com/shaderecker/ansible-pihole
 
-The aim is to create a Pi Hole Raspberry Pi install with the relevant ufw rules via an Ansible playbook
-
-## Securing your Raspberry Pi with Ansible
-
-Ansible playbook to secure your Raspberry Pi.
-Based on [Securing your Raspberry Pi](https://www.raspberrypi.org/documentation/configuration/security.md)  by the Raspberry Pi Foundation.
+The aim is to create a Pi Hole Raspberry Pi install with the relevant ufw rules via an Ansible playbook, using an Unbound DNS server.
 
 ## What will be achieved by this Ansible playbook?
 
-The playbook will perform configuration modifications in the following areas.
+The playbook will perform configuration modifications in the following areas:
 
 ### Raspbian users
 * Change the password of the pi user
@@ -43,6 +38,7 @@ The playbook will perform configuration modifications in the following areas.
 ### Pi Hole
 * Create a Pi Hole Docker container
 * Test the container is running
+* Auto conifgured to use the Unbound DNS Server
 
 
 ## Prerequisites
@@ -110,11 +106,17 @@ cat /.ssh/id_rsa.pub >> roles/security/files/authorized_keys
 Edit the variables file to set e.g. the custom password for the pi user, the name of the alternative user etc.
 ```
 vim roles/security/vars/main.yaml
+vim group_vars/pi.yaml
 ```
 
 Edit the variables file to set the relevant IP addresses for Pi Hole etc
 ```
 vim roles/pihole/vars/main.yaml
+```
+
+Edit the Watchtower CRON update schedule 
+```
+vim roles/docker/vars/main.yml
 ```
 
 ### How to run the Ansible playbook to secure your Raspberry Pi
@@ -145,6 +147,13 @@ The base of this project comes from the work done below:
  
 
 There is also a list of [contributors](https://github.com/tomgelbling/Securing-your-Raspberry-Pi-with-Ansible/graphs/contributors) who participated in the original security project.
+
+
+## References: Securing your Raspberry Pi with Ansible
+
+Ansible playbook to secure your Raspberry Pi.
+Based on [Securing your Raspberry Pi](https://www.raspberrypi.org/documentation/configuration/security.md)  by the Raspberry Pi Foundation.
+
 
 ## License
 
