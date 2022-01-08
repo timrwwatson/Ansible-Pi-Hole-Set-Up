@@ -5,6 +5,7 @@
     autoremove: yes
     update_cache: yes
     upgrade: dist
+    cache_valid_time: 432000
 
 - name: Check if reboot is needed
   stat:

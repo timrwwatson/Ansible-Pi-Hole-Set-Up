@@ -35,13 +35,13 @@ The playbook will perform configuration modifications in the following areas.
 * Add the alternate superuser to the docker group
 * Add an instance of [WatchTower](https://containrrr.dev/watchtower/) that will update containers with a CRON job
 
+### Unbound
+* Create a [Unbound Docker container](https://hub.docker.com/r/mvance/unbound-rpi) see also [the none pi docker image](https://hub.docker.com/r/mvance/unbound) 
+* Configured to use host network slight modifications from the guide found [here](https://www.xfelix.com/2020/09/pihole-unbound-docker-setup-on-raspberry-pi/)
+
 ### Pi Hole
 * Create a Pi Hole Docker container
 * Test the container is running
-
-### TODO
-* Add unbound DNS server/service docker container to complete the Pi Hole Build: https://www.youtube.com/watch?v=FnFtWsZ8IP0
-
 
 
 ## Prerequisites

@@ -1,0 +1,41 @@
+- name: Create unbound directory
+  file:
+    path: "{{ unbound_file_dir }}"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    state: directory
+    mode: '0744'
+
+- name: Copy unbound.conf file to remote
+  copy:
+    src: ../vars/unbound.conf
+    dest: "{{ unbound_file_dir }}"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: '0644'
+    
+- name: Copy a-records.conf file to remote
+  copy:
+    src: ../vars/a-records.conf
+    dest: "{{ unbound_file_dir }}"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: '0644'
+    
+- name: Download root.hints
+  get_url:
+    url: https://www.internic.net/domain/named.root
+    dest: "{{ unbound_file_dir }}"
+    mode: '0644'
+    
+- name: Start/Update unbound container
+  docker_container:
+    name: unbound
+    image: "mvance/unbound-rpi:latest"
+    pull: yes
+    restart_policy: unless-stopped
+    network_mode: host
+    volumes:
+      - "/home/{{ ansible_user }}/unbound/:/opt/unbound/etc/unbound/"
+   
+

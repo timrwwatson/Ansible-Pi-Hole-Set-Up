@@ -2,7 +2,11 @@ static_dns: "1.1.1.1"
 pihole_image: "pihole/pihole:2021.12.1"
 pihole_ftl_max_db_days: "180"
 pihole_webpassword: Intranet # example value, change it and better use ansible-vault
-pihole_dns: "1.1.1.1;2606:4700:4700::1111"
+
+#Here I'm pointing to my local unbound dns server, otherwise you can point to a remote dns server as commented out
+#pihole_dns: "1.1.1.1;2606:4700:4700::1111"
+pihole_dns: "127.0.0.1#5335"
+
 pihole_rev_server: "true"
 pihole_rev_server_domain: "Homehub3"
 pihole_rev_server_target: "192.168.0.1"
