@@ -1,5 +1,5 @@
 static_dns: "1.1.1.1"
-pihole_image: "pihole/pihole:2021.12.1"
+pihole_image: "pihole/pihole:latest"
 pihole_ftl_max_db_days: "180"
 pihole_webpassword: Intranet # example value, change it and better use ansible-vault
 
