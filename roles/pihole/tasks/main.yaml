@@ -25,9 +25,11 @@
       TZ: "{{ timezone }}"
       WEBPASSWORD: "{{ pihole_webpassword }}"
       PIHOLE_DNS_: "{{ pihole_dns }}"
-      ServerIP: "{{ pihole_ip }}"
+      FTLCONF_REPLY_ADDR4: "{{ pihole_ip }}"
       hostname: "pi.hole"
     network_mode: host
+    capabilities:
+      - NET_ADMIN
     volumes:
       - "/home/{{ ansible_user }}/pihole/pihole/:/etc/pihole/"
       - "/home/{{ ansible_user }}/pihole/dnsmasq.d/:/etc/dnsmasq.d/"
